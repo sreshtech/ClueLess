@@ -1,0 +1,43 @@
+{
+  "name": "Myntra",
+  "version": "1.0.0",
+  "description": "My Social Media Application for myntra",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prod_start": "set BUBBLE_PRODUCTION=production && nodemon index.js"
+  },
+  "author": "Anshu Soni",
+  "license": "ISC",
+  "dependencies": {
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^5.1.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-ejs-layouts": "^2.5.1",
+    "express-session": "^1.17.3",
+    "gulp": "^4.0.2",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-rev": "^11.0.0",
+    "gulp-sass": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "kue": "^0.11.1",
+    "mongoose": "^8.0.3",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "node-fetch": "^2.6.1",
+    "node-sass-middleware": "^1.1.0",
+    "nodemailer": "^6.9.8",
+    "particles.js": "^2.0.0",
+    "passport": "^0.7.0",
+    "passport-google-oauth": "^2.0.0",
+    "passport-jwt": "^4.0.1",
+    "passport-local": "^1.0.0",
+    "rotating-file-stream": "^3.2.1",
+    "socket.io": "^4.7.3"
+  }
+}
