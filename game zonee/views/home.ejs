@@ -1,0 +1,56 @@
+<!-- <lil="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sue+Ellen+Francisco&display=swap" rel="stylesheet"> -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/home.css">
+<link rel="stylesheet" href="/css/chat_box.css">
+
+<div id="home-container">
+    <section id="feed-posts">
+        <section id="problem-statement" class="problem-statement">
+            <h2>Style Statement for the Week!</h2>
+            <% if(locals.user) {%>
+                <p>
+                    <b>THEME : Style Challenge: Rose Reverie <br></b>
+                   <b> Hey fashionistas! Ready to bloom in style? This week, <br>we're diving into the world of roses—elegant, romantic, and oh-so-chic.</b><br>
+                    <b>Style Tips:</b><br>
+                    
+
+            <b>Play with textures:</b> mix velvet, lace, and satin to create a look that's as rich and varied as a rose garden.<br>
+            <b>Accessorize boldly:</b> rose-themed jewelry, flower crowns, or even rose-shaped bags to make your outfit pop.<br>
+            <b>Makeup magic:</b> highlight your look with rose-toned eyeshadows, blush, and lip colors.<br>
+            <br>
+                    <b><u>#RoseReverie #GenZFashion #BloomInStyle #FloralVibes #RoseGoldGlam
+
+                        </u></b><br>
+                </p>
+            <% } %>
+        </section>
+        <h3>Get, Set, Ready & Strike a Pose!</h3>
+        <% if(locals.user) {%>
+            <form action="/posts/create" id="new-post-form" method="POST" enctype="multipart/form-data"> 
+                <textarea name="content" cols="50" rows="3" placeholder="Strike a new post!" required></textarea><br>
+                <input type="file" name="image" required><br>
+                <input type="submit" value="POST">
+            </form>
+        <% } %>
+        <div id="posts-list-container">
+            <ul class="myUL">
+                <% for(post of posts) { %>
+                    <%- include('_post') -%>
+                <% } %>
+            </ul>
+        </div>
+    </section>
+    <section id="user-friends">
+        <h4>Take Fashion Inspiration from </h4>
+        <% for(u of all_users) {%>
+            <p>
+                <a href="/users/profile/<%= u.id %>"><%= u.name %></a>
+            </p>
+        <% } %>
+    </section>
+    <%- include('_chat_box') -%>
+</div>
