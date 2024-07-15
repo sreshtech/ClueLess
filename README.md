@@ -100,7 +100,6 @@ Our solution consists of three innovative features that work together to predict
 # Style Studio
 ![ananya1](https://github.com/user-attachments/assets/e41ecab8-9e19-4ca6-aebb-f6c5cab60258)
 
-![anshu](https://github.com/user-attachments/assets/f009ae5d-27f5-4cd5-9acb-49b070c20751)
 ![ananya2](https://github.com/user-attachments/assets/aaf66b67-db41-4a15-b2f3-11a6a334c5a5)
 
 ## Getting Started 🚀
