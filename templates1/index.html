@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Style Studio</title>
+    <style>
+        
+
+        
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Create 2 equal columns */
+            grid-template-rows: repeat(4, auto);
+            grid-gap: 20px; /* Gap between grid items */
+            justify-items: center; /* Center items horizontally */
+            align-items: center; /* Center items vertically */
+            margin-top: 20px;
+        }
+        h1 {
+            grid-column: span 2;
+            justify-content: center;
+            margin: 50px 0;
+            text-align: center;
+            color: #ffffe0;
+            font-family:"Silk Serif";
+            font-size: 70px ;
+            margin-top: 20px;
+        }
+        .camera-button {
+            grid-column: 1;
+            margin-top: -10px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            border: 5px solid transparent; /* Increase the border width */
+            border-radius: 50%;
+
+        }
+        .camera-button img {
+            width: 55px; /* Adjust the width as needed */
+            height: 55px; /* Maintain aspect ratio */
+            margin-left:0px; /* Maintain aspect ratio */
+            transition: filter 0.3s ease, opacity 0.3s ease,border-color 0.3s ease, transform 0.3s ease;
+        }
+        .camera-button img:hover {
+            filter: brightness(0.8);
+            opacity:0.4;
+            border-color: rgb(240, 202, 10); /* Golden border on hover */
+            transform: scale(1.1);
+            border:3px rgb(10, 217, 240);
+        }
+        .camera-button:active, .upload-button:active {
+            transform: scale(1.2) rotate(360deg); /* Add rotation on click */
+        }
+        @keyframes rotate360 {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        .camera-button img:active, .upload-button img:active {
+            animation: rotate360 1.8s ease-in-out; /* Adjust the duration as needed */
+        }
+        .upload-button {
+            grid-column: 2;
+            margin-top: -10px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            border-radius: 50%;
+            border: 5px solid transparent; /* Increase the border width */
+
+
+        }
+        .upload-button img {
+            width: 55px; /* Adjust the width as needed */
+            height: 55px; /* Maintain aspect ratio */
+            margin-left:0px; /* Maintain aspect ratio */
+            transition: filter 0.3s ease, opacity 0.3s ease,border-color 0.3s ease, transform 0.3s ease;
+        }
+        .upload-button img:hover {
+            filter: brightness(0.8);
+            opacity:0.4;
+            border-color: rgb(240, 202, 10); /* Golden border on hover */
+            transform: scale(1.1);
+            border:3px rgb(10, 217, 240);
+        }
+        #uploaded-image {
+            grid-column: 1;
+            grid-row: 3;
+            display: none;
+            width: 100%;
+            max-width: 400px;
+        }
+        #generated-image {
+            grid-column: 2;
+            grid-row: 3;
+            display: none;
+            width: 100%;
+            max-width: 400px;
+        }
+        .text-container {
+            grid-column: 1 / span 2;
+            grid-row: 4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+            border-radius: 30%;
+            padding: 20px; /* Space around the text box */
+        }
+        #text-box {
+            width: 800px;
+            padding: 10px;
+            font-size: 16px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean font */
+            border: 3px solid #f01f4c; /* Prominent blue border */
+            border-radius: 12px; /* Rounded corners */
+            background-color: #FFFFFF; /* White background */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+            transition: all 0.3s ease; /* Smooth transition */
+
+        }
+        #text-box:focus {
+            border-color: #ef2f59; /* Darker blue on focus */
+            background-color:#FADADD; /* Light blue background on focus */
+            outline: none; /* Remove default outline */
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); /* Slightly enhanced shadow on focus */
+        }
+        
+        #submit-text {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: -1px;
+            height: 45px;
+            border-radius: 10%; /* Rounded corners */
+            background-color:#ef2f59; /* Light pink background */
+            border: 2px solid #ef2f59; /* Slightly darker pink border */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+            transition: 
+                filter 0.3s ease, 
+                opacity 0.3s ease, 
+                border-color 0.3s ease, 
+                transform 0.3s ease,
+                background-color 0.3s ease; /* Smooth transition for background color */
+        }
+        
+        /* Hover effect */
+        #submit-text:hover {
+            filter: brightness(1.0); /* Slightly darker */
+            opacity: 0.8; /* Slightly faded */
+            background-color:#FADADD; /* Change background color on hover */
+            border-color:#FADADD; /* Lighter pink border on hover */
+            box-shadow: 0 0 8px rgba(0, 0, 0, 1.0); /* Enhanced shadow effect */
+            transform: scale(1.05); /* Slightly enlarge button */
+
+            position: relative; /* Ensure the pseudo-element is positioned correctly */
+            overflow: hidden; /* Hide the gradient overflow */
+        
+        }
+        #submit-text:hover::before {
+            content: "";
+            position: absolute;
+            top: -100%;
+            left: -100%;
+            width: 300%;
+            height: 300%;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 50%);
+            transform: rotate(-30deg);
+            transition: opacity 0.3s ease;
+            opacity: 0.5;
+        }
+        
+        #display-text {
+            grid-column: 1 / span 2;
+            grid-row: 4;
+            text-align: center;
+            font-size: 20px;
+            color: #3C7DC9;
+            display: none;
+        }
+        
+    </style>
+</head>
+<body>
+    
+
+    
+    
+    
+    <div class="container">
+        <h1>Style Studio</h1>
+        <button class="camera-button">
+            <img src="{{ url_for('static', filename='images/camera.svg') }}" id="camera-button" alt="Camera Logo" class="camera-logo">
+        </button>
+        <button class="upload-button">
+            <img src="{{ url_for('static', filename='images/Multimedia__28128_29-removebg-preview.png') }}" id="upload-button" alt="Upload Logo" class="upload-logo">
+        </button>
+        <video id="video" style="display: none;" autoplay></video>
+        <canvas id="canvas" style="display: none;"></canvas>
+        <img id="captured-image" class="captured-image" src="" alt="Captured Image" style="display: none;">
+        <img id="uploaded-image" src="" alt="Uploaded Image">
+
+        <form id="upload-form" action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data" style="display: none;">
+            <input type="file" accept="image/*" id="file-input" style="display: none;">
+        </form>
+        <div class="text-container">
+            <input type="text" id="text-box" placeholder="Enter your idea">
+            <button id="submit-text" >Generate</button>
+        </div>
+            <img id="generated-image" src="{{ url_for('static', filename='images/freepik-export-20240714184647QE5w.jpeg') }}" alt="generated Image" style="display:none;">
+
+
+        
+        <div id="display-text"></div>
+    </div>
+    <script src="{{ url_for('static', filename='css/ap.js') }}"></script>
+</body>
+</html>
