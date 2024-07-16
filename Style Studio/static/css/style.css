@@ -1,0 +1,109 @@
+body {
+    font-family: 'Qwitcher Grypen';
+    background-color: #f0f0f0;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/Untitled.jpg');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+    margin-top: 10px;
+}
+input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    margin: 20px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+button {
+    padding: 10px 20px;
+    background-color: #f01f4c;
+    color: white;
+    border:none;
+    border-radius: 10%;
+    cursor: pointer;
+    display: grid;
+    margin-top: 10px;
+}
+#canvas {
+    grid-column: 1;
+    width: 100%;
+    max-width: 50px;
+    display: block; /* Hide initially */
+}
+#video {
+    grid-column: 1;
+    width: 100%;
+    max-width: 50px;
+}
+.captured-image {
+    grid-column: 1;
+    grid-row: 3;
+    width: 100%;
+    max-width: 500px;
+}
+.result {
+    margin-top: 20px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.view{
+    display: flex;
+    width:100px;
+    height:50px;
+}
+.dressupload{
+    display:flex;
+    width:100px;
+    height:100px;
+}
+/* Text box with gradient background */
+#text-box-gradient {
+    border: none; /* No border */
+    border-radius: 12px; /* Rounded corners */
+    padding: 10px; /* Space inside the box */
+    font-size: 16px; /* Font size */
+    font-family: Arial, sans-serif; /* Font family */
+    background: linear-gradient(135deg, #FFC107, #FF5722); /* Gradient background */
+    color: #fff; /* White text color */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Shadow effect */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+#text-box-gradient:focus {
+    background: linear-gradient(135deg, #FF5722, #FFC107); /* Reverse gradient on focus */
+    outline: none; /* Remove default outline */
+}
+header {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    padding: 2px 0px; /* Padding around header content */
+    background-color: #f8f9fa; /* Light background color */
+    border-bottom: 1px solid #ddd; /* Optional border at the bottom */
+    header {
+        color: white; /* Text color that contrasts with the background */
+        padding: 20px;
+        text-align: center;
+    }
+    
+}
+
+/* Logo container stylin
+
+/* Logo image styling */
+
+
+
+
