@@ -1,14 +1,11 @@
 # ClueLess
 
-
-![m logo](https://github.com/user-attachments/assets/6fc131f7-4edd-4e13-b212-59de2ca746a7)
-
-
-
-# Resources
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/6fc131f7-4edd-4e13-b212-59de2ca746a7" alt="m logo" width="300">
+</p>
 
 ## Demo Video Link:
-[demo video link]
+https://github.com/sreshtech/ClueLess
 
 ---
 
@@ -34,26 +31,39 @@ Our solution consists of three innovative features that work together to predict
 ![techstack](https://github.com/user-attachments/assets/e958460e-d241-4407-9262-37e3ed451f6c)
 
 
-### Frontend
-- **Client-side framework:** React for building reusable UI components and managing state changes
-- **UI Library:** Material-UI for a consistent and visually appealing design
-- **State Management:** Redux for managing global state and actions
-- **Routing:** React Router for client-side routing and navigation
-- **CSS Preprocessor:** Sass for writing modular and efficient CSS code
+**Frontend**
+================
 
-### Backend
-- **Server-side framework:** Node.js (with Express) for building a scalable and efficient server-side API
-- **Database:** MongoDB for storing and retrieving user data, fashion items, and other relevant information
-- **API Gateway:** NGINX for routing and load balancing API requests
-- **Authentication:** Passport.js for implementing authentication and authorization mechanisms
+* **Client-side framework:** React for building reusable UI components and managing state changes
+* **UI Library:** Material-UI for a consistent and visually appealing design
+* **State Management:** Redux for managing global state and actions
+* **Routing:** React Router for client-side routing and navigation
+* **CSS Preprocessor:** Sass for writing modular and efficient CSS code
+* **Additional CSS Preprocessor:** Scss for writing modular and efficient CSS code
 
-### AI/ML
-- **Computer Vision:** Google Cloud Vision API for image analysis and object detection
+**Backend**
+================
 
-### Tools and Services
-- **Version Control:** Git for managing code changes and collaboration
-- **CI/CD:** Jenkins for automating testing, building, and deployment of the platform
-- **Project Management:** GitHub project management
+* **Server-side framework:** Node.js (with Express.js) for building a scalable and efficient server-side API
+* **Database:** MongoDB for storing and retrieving user data, fashion items, and other relevant information
+* **API Gateway:** NGINX for routing and load balancing API requests
+* **Authentication:** Passport.js for implementing authentication and authorization mechanisms
+* **Additional Framework:** Flask for building a lightweight and flexible backend API
+
+**AI/ML**
+=============
+
+* **Computer Vision:** Google Cloud Vision API for image analysis and object detection
+* **AI Model:** Stability AI for generating and processing AI models
+* **MERN Stack:** Using MongoDB, Express.js, React, and Node.js for building a full-stack AI-powered application
+
+**Tools and Services**
+=====================
+
+* **Version Control:** Git for managing code changes and collaboration
+* **CI/CD:** Jenkins for automating testing, building, and deployment of the platform
+* **Project Management:** GitHub project management for tracking issues, tasks, and project progress
+* **Additional Framework:** MERN Stack for building a full-stack application with MongoDB, Express.js, React, and Node.js
 
 ### Security 🔒
 - **SSL/TLS**
@@ -120,6 +130,8 @@ Fashion Frenzy is licensed under the MIT License.
 ## Built with ❤️ by ClueLess
 CONTRIBUTORS
 
-- **Contributor** - ANSHU SONI
+TEAM LEADER ~ IIT_BHU ANSHU SONI
+
 - **Contributor** - SRESHTA
+- **Contributor** - ANSHU SONI
 - **Contributor** - ANANYA SOLANKI
