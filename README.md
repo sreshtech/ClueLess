@@ -1,11 +1,4 @@
-# ClueLess
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/6fc131f7-4edd-4e13-b212-59de2ca746a7" alt="m logo" width="300">
-</p>
-
-## Demo Video Link:
-https://github.com/sreshtech/ClueLess
+# Vestiare
 
 ---
 
@@ -117,20 +110,12 @@ Our solution consists of three innovative features that work together to predict
 - **Install dependencies:** `npm install` or `yarn install`
 - **Start the development server:** `npm start` or `yarn start`
 
-## Contributing
-We welcome contributions to Fashion Frenzy! If you're interested in contributing, please fork the repository, make your changes, and submit a pull request.
 
----
-
-## License 📄
-Fashion Frenzy is licensed under the MIT License.
-
----
 
 ## Built with ❤️ by ClueLess
-CONTRIBUTORS
 
-TEAM LEADER ~ IIT_BHU ANSHU SONI
+
+
 
 - **Contributor** - SRESHTA
 - **Contributor** - ANSHU SONI
